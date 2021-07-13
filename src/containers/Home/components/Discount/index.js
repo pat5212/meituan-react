@@ -20,7 +20,12 @@ class Discount extends Component {
                 to={`/detail/${item.id}`}
                 className="discount__item"
               >
-                此处需要实现
+                <img alt="" className="discount__itemPic" src={item.picture} />
+                <div className="discount__itemTitle"> {item.shop} </div>
+                <div className="discount__itemPriceWrapper"> 
+                  <div className="discount__itemCurrentPrice"> {item.currentPrice} </div>
+                  <div className="discount__itemOldPrice"> {item.oldPrice} </div>
+                </div>
               </Link>
             );
           })}
