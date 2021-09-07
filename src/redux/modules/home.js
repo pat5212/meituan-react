@@ -147,16 +147,9 @@ export const getLikes = state => {
 
 //获取特惠商品state
 export const getDiscounts = state => {
-  return [  {
-    "id": "p-100",
-    "shopIds": ["s-100"],
-    "shop": "颐和园旺季成人",
-    "tag": "免预约",
-    "product": "颐和园旺季成人",
-    "currentPrice": 1,
-    "oldPrice": 400,
-    "picture": "http://p1.meituan.net/200.0/auditimage/94d6d558880036993a822c28a2086aae145376.jpg"
-  }]
+  return state.home.discounts.ids.map(id => {
+    return state.entities.products[id]
+  })
 }
 
 //猜你喜欢当前分页码

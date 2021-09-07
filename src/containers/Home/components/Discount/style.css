@@ -56,6 +56,8 @@
 
 .discount__itemPic {
   height: 80px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .discount__itemTitle {
@@ -72,7 +74,11 @@
   height: 16px;
   font-size: 0;
   padding-top: 5px;
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .discount__itemCurrentPrice{
@@ -90,6 +96,7 @@
   color: #999;
   font-size: 12px;
   margin-left: 2px;
+  text-decoration: line-through;
 }
 
 .discount__itemOldPrice::before {
