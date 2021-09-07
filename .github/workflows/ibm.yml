@@ -74,5 +74,6 @@ jobs:
         kubectl apply -f service.yaml
         kubectl get services -o wide
         kubectl get pods -l app=$DEPLOYMENT_NAME
-        ibmcloud cs workers $IKS_CLUSTER
         kubectl describe service $DEPLOYMENT_NAME
+        ibmcloud cs workers mycluster-free
+
