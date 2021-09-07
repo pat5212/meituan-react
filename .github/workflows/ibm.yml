@@ -74,3 +74,4 @@ jobs:
         kubectl apply -f service.yaml
         kubectl get services -o wide
         kubectl get nodes -o wide
+        kubectl describe service $DEPLOYMENT_NAME
